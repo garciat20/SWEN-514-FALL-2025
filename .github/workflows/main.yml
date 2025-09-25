@@ -46,7 +46,7 @@ jobs:
 
       # Step 4: Initialize Terraform working directory
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -backend-config="bucket=my-terraform-state-bucket" -backend-config="key=prod/terraform.tfstate" -backend-config="region=us-east-1"
 
       # Step 5: Preview the infrastructure changes
       - name: Terraform Plan
@@ -87,7 +87,7 @@ jobs:
 
       # Step 4: Initialize Terraform working directory
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -backend-config="bucket=my-terraform-state-bucket" -backend-config="key=prod/terraform.tfstate" -backend-config="region=us-east-1"
 
       # Step 5: Destroy
       - name: Terraform Destroy
