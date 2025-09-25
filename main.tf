@@ -47,12 +47,12 @@ resource "aws_security_group" "allow_traffic" {
 
 terraform {
   required_version = ">= 1.11.0"
-    
+
   backend "s3" {
-    bucket = "my-terraform-state-bucket" # S3 bucket for state storage
-    key = "prod/terraform.tfstate" # State file path in the bucket
-    region = "us-east-1" # AWS region
-    encrypt = true
-    use_lockfile = true
+    bucket = "my-terraform-state-bucket" 
+    key = "prod/terraform.tfstate"
+    region = "us-east-1" 
+    encrypt = true 
+    use_lock_file = true
   }
 }
