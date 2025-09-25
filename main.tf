@@ -46,7 +46,7 @@ resource "aws_security_group" "allow_traffic" {
 }
 
 terraform {
-  required_version = ">= 1.11.0"
+  required_version = ">= 1.1.9"
 
   backend "s3" {
     bucket = "my-terraform-state-bucket" 
